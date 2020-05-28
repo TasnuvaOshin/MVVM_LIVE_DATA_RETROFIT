@@ -5,10 +5,13 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import idevelopapps.com.mvvmlivedata.Model.resultModel;
 import idevelopapps.com.mvvmlivedata.R;
+import idevelopapps.com.mvvmlivedata.Repository.resultRepository;
 import idevelopapps.com.mvvmlivedata.ViewModel.resultViewModel;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -32,6 +35,11 @@ public class SampleActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    public void CheckUpdate(View view) {
+        resultRepository.getInstance().fetchresult();
 
     }
 }

@@ -31,4 +31,11 @@
         android:textSize="22sp"
         android:fontFamily="@font/roboto_slab" />
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check"
+        android:onClick="CheckUpdate"
+        tools:ignore="OnClick"></Button>
 </LinearLayout>
