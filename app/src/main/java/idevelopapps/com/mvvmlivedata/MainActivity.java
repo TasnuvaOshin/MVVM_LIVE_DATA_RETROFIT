@@ -8,12 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import idevelopapps.com.mvvmlivedata.Adapter.quranAdapter;
 import idevelopapps.com.mvvmlivedata.Model.quranModel;
 import idevelopapps.com.mvvmlivedata.ViewModel.quranViewModel;
-
 import android.os.Bundle;
 import android.util.Log;
-
 import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     quranViewModel quranViewModel;

@@ -13,42 +13,44 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class quranRepository {
-   private static quranRepository repository;
-   private ArrayList<quranModel> list = new ArrayList<>();
-   apiClient apiClient;
+    private static quranRepository repository;
+    private ArrayList<quranModel> list = new ArrayList<>();
+    apiClient apiClient;
     MutableLiveData<ArrayList<quranModel>> data = new MutableLiveData<>();
-   public static quranRepository getInstance(){
 
-       if(repository == null){
-           repository = new quranRepository();
+    public static quranRepository getInstance() {
 
-       }
-       return repository;
-   }
-/*
-Get date from a web service
- */
-   public MutableLiveData<ArrayList<quranModel>> getSura(){
-    return data;
-   }
+        if (repository == null) {
+            repository = new quranRepository();
+
+        }
+        return repository;
+    }
+
+    /*
+    Get date from a web service
+     */
+    public MutableLiveData<ArrayList<quranModel>> getSura() {
+        return data;
+    }
 
 
-   public void fetchSura(){
-       apiClient = apiConnection.cteateService(apiClient.class);
-       apiClient.getSura().enqueue(new Callback<ArrayList<quranModel>>() {
-           @Override
-           public void onResponse(Call<ArrayList<quranModel>> call, Response<ArrayList<quranModel>> response) {
+    public void fetchSura() {
+        apiClient = apiConnection.cteateService(apiClient.class);
+        apiClient.getSura().enqueue(new Callback<ArrayList<quranModel>>() {
+            @Override
+            public void onResponse(Call<ArrayList<quranModel>> call, Response<ArrayList<quranModel>> response) {
 
-               list = response.body();
-               data.postValue(response.body());
-               Log.d("size", String.valueOf(list.size()));
-           }
+                list = response.body();
+                data.postValue(response.body());
+                Log.d("size", String.valueOf(list.size()));
+            }
 
-           @Override
-           public void onFailure(Call<ArrayList<quranModel>> call, Throwable t) {
+            @Override
+            public void onFailure(Call<ArrayList<quranModel>> call, Throwable t) {
 
-           }
-       });
-   }
+            }
+        });
+    }
 
 }
