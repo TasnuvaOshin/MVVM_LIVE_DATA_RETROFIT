@@ -9,6 +9,7 @@ import idevelopapps.com.mvvmlivedata.Repository.resultRepository;
 import idevelopapps.com.mvvmlivedata.ViewModel.resultViewModel;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,20 @@ public class SampleActivity extends AppCompatActivity {
             }
         });
 
+        /*
+        if you want to check data after 15s interval you can simply run a handler wich will check the update if
+        and update found our mainview will automatically update
+         */
+//        final Handler handler = new Handler();
+//        final int delay = 150000; //milliseconds
+//
+//        handler.postDelayed(new Runnable(){
+//            public void run(){
+//                //do something
+//                resultRepository.getInstance().fetchresult();
+//                handler.postDelayed(this, delay);
+//            }
+//        }, delay);
 
     }
 
