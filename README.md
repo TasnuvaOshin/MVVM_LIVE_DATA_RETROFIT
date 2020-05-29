@@ -1,5 +1,5 @@
 # Model View View Model with Live Data Using Retrofit Network Call
-> How You can use mvvm for live data and retofit its quite easy follow these steps hope this will help you . You can get Updates Value From the Network call .For More CHeck SampleActivity.class
+> How You can use mvvm for live data and retofit its quite easy follow these steps hope this will help you . You can get Updated Value From the Server via  Network call .For More CHeck SampleActivity.class
 
 সারভার থেকে লাইভ ডাটা অবজাভ করে এপর ভিউতে কিভাবে খুব ইজিলি উপডেট করতে পারবেন এটাই দেখানো হল ঃ  এখানে কিছু স্যাম্পল দেয়া হল 
 বিস্তারিত    জানতে আপনি    SampleActivity  চেক করুন। 
