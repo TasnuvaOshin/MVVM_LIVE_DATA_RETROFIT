@@ -233,8 +233,8 @@ public class SampleActivity extends AppCompatActivity {
         });
 
         /*
-        if you want to check data after 15s interval you can simply run a handler wich will check the update if
-        and update found our mainview will automatically update
+        if you want to check data every 15s interval you can simply run a handler wich will check the update.
+        and update found our mainview
          */
 //        final Handler handler = new Handler();
 //        final int delay = 150000; //milliseconds
